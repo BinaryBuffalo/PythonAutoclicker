@@ -1,0 +1,22 @@
+{
+    "min_cps": 7.67,
+    "max_cps": 9.67,
+    "algorithm": "Humanized Burst (Gaussian Jitter)",
+    "min_jitter_ms": 16.67,
+    "max_jitter_ms": 33.5,
+    "cps_std_dev_factor": 0.38,
+    "duration_mean_ms": 40.0,
+    "duration_std_dev_ms": 10.0,
+    "shake_x": 1,
+    "shake_y": 1,
+    "drag_x_min": 1,
+    "drag_x_max": 1,
+    "drag_y_min": 1,
+    "drag_y_max": 1,
+    "sensitivity": 1.0,
+    "drag_smoothness": 0.3,
+    "click_type": "Left",
+    "smart_mode": true,
+    "toggle_key": "caps_lock",
+    "toggle_button": null
+}
