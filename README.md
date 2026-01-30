@@ -1,13 +1,54 @@
-PythonAutoclickerAdvanced Python Auto clickerThis application was developed to provide a suite of specific, high-end features designed for seamless gaming integration and anti-cheat bypass.🌟 Key Core FeaturesToggle On / Off: Quickly activate or deactivate the clicking logic with a custom keybind.Flexible Modes: Seamlessly switch between "Click when Toggled" (Standard) and "Hold to Toggle" (Smart Mode).Inventory Safety: Ability to turn off hold-to-toggle while keeping the clicker "Armed," allowing for safe menu and inventory navigation.Advanced Configs: Supports smart toggle and allows for specific keys like CAPS_LOCK to be used for state management.Expandability: The architecture is built to support future integrations, such as screen capture and Image-to-Text modules for fully automated, no-toggle cheating.Smart Auto Clicker V7.5 (Cleanup Fix)An advanced, humanized auto-clicker built with Python and PyQt5. This application is designed to simulate natural mouse behavior using randomized timing algorithms, micro-movements, and a unique "Smart Mode" math-based detection logic to stay undetected in modern games (tested on R6, Arc Raiders, Call of Duty).🚀 Installation & SetupTo ensure a clean environment and avoid dependency conflicts, it is recommended to run this application within a Python Virtual Environment (venv).1. PrerequisitesPython 3.8 or higher installed on your system.Pip (Python package installer).2. Setup Virtual EnvironmentOpen your terminal or command prompt in the project folder and run:Windows:# Create the virtual environment
+PythonAutoclicker
+Advanced Python Auto clicker designed for high-performance gaming and anti-cheat bypass.
+🌟 Key Core Features
+Toggle On / Off: Instantly activate or deactivate clicking with a custom keybind.
+Flexible Modes: Switch between Standard Mode (click when toggled) and Smart Mode (hold to click).
+Inventory Safety: Keep the clicker "Armed" while disabling hold-to-click, allowing for safe menu and inventory navigation.
+Advanced Configs: Full support for smart toggles and specific keys like CAPS_LOCK for state management.
+Expansion Ready: Built on an architecture that supports future Image-to-Text and Screen Capture automation.
+Smart Auto Clicker V7.5 (Cleanup Fix)
+This application simulates natural mouse behavior using randomized timing, micro-movements, and unique "Smart Mode" math-based detection logic. Verified for use in titles like R6, Arc Raiders, and Call of Duty.
+🚀 Installation & Setup
+It is highly recommended to run this in a Python Virtual Environment (venv) to avoid dependency issues.
+1. Prerequisites
+Python 3.8+
+Pip
+2. Setup Virtual Environment
+Open your terminal in the project folder:
+Windows:
 python -m venv venv
-
-# Activate the environment
 .\venv\Scripts\activate
-macOS/Linux:# Create the virtual environment
-python3 -m venv venv
 
-# Activate the environment
+
+macOS/Linux:
+python3 -m venv venv
 source venv/bin/activate
-3. Install DependenciesWith the environment activated, install the required modules:pip install PyQt5 pynput
-🎮 How to RunOnce installed, simply execute the main script:python aclick3.py
-🛠️ How It WorksThe Backend: pynputThe application uses the pynput library for both listening and controlling:Listeners: It monitors your keyboard and mouse in the background to detect your "Toggle Key" and physical mouse clicks.Controllers: It sends low-level input commands to the OS to simulate mouse movement, presses, and releases. Unlike simple clickers, this bypasses basic detection by operating at a level that mimics hardware input.The UI: PyQt5The interface is built using PyQt5, providing a responsive and threaded GUI.Threading: The clicker logic runs on a separate background thread. This ensures that the UI remains responsive and doesn't "freeze" while the clicker is active.Signals: It uses PyQt pyqtSignal to safely communicate status updates from the background clicking thread to the main window labels.🧠 Smart Mode (Hold-to-Click Logic)This is the core "undetectable" feature. Instead of a simple loop, "Smart Mode" uses Event Math:Detection: The app tracks the difference between Physical events (you clicking) and Virtual events (the app clicking).Logic: When you hold your mouse button down, the clicker begins. It calculates Check = TotalEvents - (VirtualClicks * 2).Human Release: As soon as you let go of the physical button, the math shifts, signaling the thread to stop instantly. This mimics a human's exact reaction time and prevents "clicking after release" which anti-cheats often flag.✨ Customizable FeaturesAlgorithm Profiles:Uniform CPS: Standard randomized interval.Gaussian CPS: Follows a bell curve distribution for more "human-like" variation.Humanized Burst: Simulates "fatigue" and "bursting" patterns where the speed drifts slightly over time.Movement & Shake:Shake X/Y: Adds tiny pixel-level jitters during clicks to simulate hand tremors.Sensitivity: Adjusts how drastically the movement jitter affects your aim.Click Timing:Min/Max CPS: Set your desired speed range.Click Duration: Customize how long the button is held down (Mean and StdDev) to avoid a perfectly consistent "digital" click.Config Management:Save and Load your settings via JSON files. This allows you to have different profiles for different games (e.g., a "Fast" profile for COD and a "Precise" profile for RS6).🛡️ Anti-Cheat SafetyBecause this app utilizes Gaussian Jitter, Micro-Shakes, and Smart Event Math, it avoids the two biggest red flags:Perfect Timing: No two clicks are ever the same distance apart.Static Cursor: The cursor moves slightly during the click, just like a human finger pressing a mouse button.Disclaimer: Use responsibly. While designed for stealth, use in online games is at your own risk.
+
+
+3. Install Dependencies
+pip install PyQt5 pynput
+
+
+🎮 How to Run
+Once installed, run the script:
+python aclick3.py
+
+
+🛠️ How It Works
+The Backend: pynput
+The app uses pynput for background monitoring and input control. It operates at a low level to mimic actual hardware input rather than simple software-based clicks.
+The UI: PyQt5
+The interface is fully threaded. The clicking logic runs independently of the GUI, ensuring the app never freezes or lags during high-speed clicking.
+🧠 Smart Mode (Hold-to-Click Logic)
+Smart Mode uses Event Math to stay hidden:
+Tracking: It tracks the ratio of Physical vs. Virtual click events.
+Logic: It monitors the state using the formula: Check = TotalEvents - (VirtualClicks * 2).
+Human Reaction: This math allows the app to stop the instant you release the physical button, perfectly mimicking human reaction speed.
+✨ Customizable Features
+Algorithms: Choose between Uniform, Gaussian (Bell Curve), or Humanized Burst patterns.
+Micro-Movements: Adjust Shake X/Y and Sensitivity to simulate natural hand tremors.
+Precision Timing: Set Min/Max CPS and randomize Click Duration (Mean/StdDev).
+Profiles: Save and Load your custom settings via JSON configuration files.
+🛡️ Anti-Cheat Safety
+By utilizing Gaussian Jitter, Micro-Shakes, and Smart Event Math, the clicker avoids "Perfect Timing" and "Static Cursor" red flags that modern anti-cheats look for.
+Disclaimer: Use responsibly. This tool is designed for stealth, but use in online environments is at your own risk.
