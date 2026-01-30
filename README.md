@@ -1,2 +1,23 @@
 # PythonAutoclicker
 Advanced Python Auto clicker
+
+This was made because it wanted a these specfic features 
+(1) - toggle On / Off 
+(2) - switch between click when toggled and hold to toggle 
+(3) - be able to turn off hold to toggle while still having the autoclicker armed (INVENTORY USE)
+(4) - Configs are both using smart toggle & CAPS_LOCK to toggle off/on
+(5) - Using using Screen capture software & IMAGE TO TEXT modules a fully automatic auto clicker cheat could be implemented without any toggle.
+
+Smart Auto Clicker V7.5 (Cleanup Fix)An advanced, humanized auto-clicker built with Python and PyQt5. This application is designed to simulate natural mouse behavior using randomized timing algorithms, micro-movements, and a unique "Smart Mode" math-based detection logic to stay undetected in modern games (tested on R6, Arc Raiders, Call of Duty).🚀 Installation & SetupTo ensure a clean environment and avoid dependency conflicts, it is recommended to run this application within a Python Virtual Environment (venv).1. PrerequisitesPython 3.8 or higher installed on your system.Pip (Python package installer).2. Setup Virtual EnvironmentOpen your terminal or command prompt in the project folder and run:Windows:# Create the virtual environment
+python -m venv venv
+
+# Activate the environment
+.\venv\Scripts\activate
+macOS/Linux:# Create the virtual environment
+python3 -m venv venv
+
+# Activate the environment
+source venv/bin/activate
+3. Install DependenciesWith the environment activated, install the required modules:pip install PyQt5 pynput
+🎮 How to RunOnce installed, simply execute the main script:python aclick3.py
+🛠️ How It WorksThe Backend: pynputThe application uses the pynput library for both listening and controlling:Listeners: It monitors your keyboard and mouse in the background to detect your "Toggle Key" and physical mouse clicks.Controllers: It sends low-level input commands to the OS to simulate mouse movement, presses, and releases. Unlike simple clickers, this bypasses basic detection by operating at a level that mimics hardware input.The UI: PyQt5The interface is built using PyQt5, providing a responsive and threaded GUI.Threading: The clicker logic runs on a separate background thread. This ensures that the UI remains responsive and doesn't "freeze" while the clicker is active.Signals: It uses PyQt pyqtSignal to safely communicate status updates from the background clicking thread to the main window labels.🧠 Smart Mode (Hold-to-Click Logic)This is the core "undetectable" feature. Instead of a simple loop, "Smart Mode" uses Event Math:Detection: The app tracks the difference between Physical events (you clicking) and Virtual events (the app clicking).Logic: When you hold your mouse button down, the clicker begins. It calculates Check = TotalEvents - (VirtualClicks * 2).Human Release: As soon as you let go of the physical button, the math shifts, signaling the thread to stop instantly. This mimics a human's exact reaction time and prevents "clicking after release" which anti-cheats often flag.✨ Customizable FeaturesAlgorithm Profiles:Uniform CPS: Standard randomized interval.Gaussian CPS: Follows a bell curve distribution for more "human-like" variation.Humanized Burst: Simulates "fatigue" and "bursting" patterns where the speed drifts slightly over time.Movement & Shake:Shake X/Y: Adds tiny pixel-level jitters during clicks to simulate hand tremors.Sensitivity: Adjusts how drastically the movement jitter affects your aim.Click Timing:Min/Max CPS: Set your desired speed range.Click Duration: Customize how long the button is held down (Mean and StdDev) to avoid a perfectly consistent "digital" click.Config Management:Save and Load your settings via JSON files. This allows you to have different profiles for different games (e.g., a "Fast" profile for COD and a "Precise" profile for RS6).🛡️ Anti-Cheat SafetyBecause this app utilizes Gaussian Jitter, Micro-Shakes, and Smart Event Math, it avoids the two biggest red flags:Perfect Timing: No two clicks are ever the same distance apart.Static Cursor: The cursor moves slightly during the click, just like a human finger pressing a mouse button.Disclaimer: Use responsibly. While designed for stealth, use in online games is at your own risk.
