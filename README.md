@@ -1,4 +1,4 @@
-# 🖱️ PythonAutoclicker (v7.5)
+# 🖱️ PythonAutoclicker (v7.5) FINAL
 > **High-performance, stealth-focused automation for modern gaming.**
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
