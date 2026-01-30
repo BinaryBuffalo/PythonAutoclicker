@@ -1,14 +1,4 @@
-# PythonAutoclicker
-Advanced Python Auto clicker
-
-This was made because it wanted a these specfic features 
-(1) - toggle On / Off 
-(2) - switch between click when toggled and hold to toggle 
-(3) - be able to turn off hold to toggle while still having the autoclicker armed (INVENTORY USE)
-(4) - Configs are both using smart toggle & CAPS_LOCK to toggle off/on
-(5) - Using using Screen capture software & IMAGE TO TEXT modules a fully automatic auto clicker cheat could be implemented without any toggle.
-
-Smart Auto Clicker V7.5 (Cleanup Fix)An advanced, humanized auto-clicker built with Python and PyQt5. This application is designed to simulate natural mouse behavior using randomized timing algorithms, micro-movements, and a unique "Smart Mode" math-based detection logic to stay undetected in modern games (tested on R6, Arc Raiders, Call of Duty).🚀 Installation & SetupTo ensure a clean environment and avoid dependency conflicts, it is recommended to run this application within a Python Virtual Environment (venv).1. PrerequisitesPython 3.8 or higher installed on your system.Pip (Python package installer).2. Setup Virtual EnvironmentOpen your terminal or command prompt in the project folder and run:Windows:# Create the virtual environment
+PythonAutoclickerAdvanced Python Auto clickerThis application was developed to provide a suite of specific, high-end features designed for seamless gaming integration and anti-cheat bypass.🌟 Key Core FeaturesToggle On / Off: Quickly activate or deactivate the clicking logic with a custom keybind.Flexible Modes: Seamlessly switch between "Click when Toggled" (Standard) and "Hold to Toggle" (Smart Mode).Inventory Safety: Ability to turn off hold-to-toggle while keeping the clicker "Armed," allowing for safe menu and inventory navigation.Advanced Configs: Supports smart toggle and allows for specific keys like CAPS_LOCK to be used for state management.Expandability: The architecture is built to support future integrations, such as screen capture and Image-to-Text modules for fully automated, no-toggle cheating.Smart Auto Clicker V7.5 (Cleanup Fix)An advanced, humanized auto-clicker built with Python and PyQt5. This application is designed to simulate natural mouse behavior using randomized timing algorithms, micro-movements, and a unique "Smart Mode" math-based detection logic to stay undetected in modern games (tested on R6, Arc Raiders, Call of Duty).🚀 Installation & SetupTo ensure a clean environment and avoid dependency conflicts, it is recommended to run this application within a Python Virtual Environment (venv).1. PrerequisitesPython 3.8 or higher installed on your system.Pip (Python package installer).2. Setup Virtual EnvironmentOpen your terminal or command prompt in the project folder and run:Windows:# Create the virtual environment
 python -m venv venv
 
 # Activate the environment
