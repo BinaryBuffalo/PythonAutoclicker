@@ -1,54 +1,39 @@
-PythonAutoclicker
-Advanced Python Auto clicker designed for high-performance gaming and anti-cheat bypass.
-🌟 Key Core Features
-Toggle On / Off: Instantly activate or deactivate clicking with a custom keybind.
-Flexible Modes: Switch between Standard Mode (click when toggled) and Smart Mode (hold to click).
-Inventory Safety: Keep the clicker "Armed" while disabling hold-to-click, allowing for safe menu and inventory navigation.
-Advanced Configs: Full support for smart toggles and specific keys like CAPS_LOCK for state management.
-Expansion Ready: Built on an architecture that supports future Image-to-Text and Screen Capture automation.
-Smart Auto Clicker V7.5 (Cleanup Fix)
-This application simulates natural mouse behavior using randomized timing, micro-movements, and unique "Smart Mode" math-based detection logic. Verified for use in titles like R6, Arc Raiders, and Call of Duty.
-🚀 Installation & Setup
-It is highly recommended to run this in a Python Virtual Environment (venv) to avoid dependency issues.
-1. Prerequisites
-Python 3.8+
-Pip
-2. Setup Virtual Environment
-Open your terminal in the project folder:
-Windows:
-python -m venv venv
-.\venv\Scripts\activate
+# 🖱️ PythonAutoclicker (v7.5)
+> **High-performance, stealth-focused automation for modern gaming.**
 
+[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Anti-Cheat](https://img.shields.io/badge/Anti--Cheat-Bypass_Optimized-success)
 
-macOS/Linux:
-python3 -m venv venv
-source venv/bin/activate
+`PythonAutoclicker` is an advanced input simulation tool designed to mimic human behavior. By combining **Gaussian distribution timing**, **micro-movement jitter**, and **Smart Event Math**, it provides a high level of stealth for titles like *R6*, *Arc Raiders*, and *Call of Duty*.
 
+---
 
-3. Install Dependencies
-pip install PyQt5 pynput
+## 🌟 Key Features
 
+* **Dual-Logic Modes:** * **Standard Mode:** Classic toggle (On/Off).
+    * **Smart Mode:** Context-aware Hold-to-Click.
+* **Inventory Safety:** Keep the script "Armed" while disabling clicking in menus for seamless inventory management.
+* **Humanized Algorithms:** Choose between **Uniform**, **Gaussian (Bell Curve)**, or **Humanized Burst** patterns.
+* **Micro-Movements:** Simulates natural hand tremors with adjustable `Shake X/Y` and sensitivity.
+* **Asynchronous UI:** Built on **PyQt5** with multi-threading to ensure zero lag during high CPS execution.
 
-🎮 How to Run
-Once installed, run the script:
-python aclick3.py
+---
 
+## 🧠 Smart Mode Logic
+To bypass modern detection, the clicker tracks the ratio of Physical vs. Virtual click events using a proprietary state management formula:
 
-🛠️ How It Works
-The Backend: pynput
-The app uses pynput for background monitoring and input control. It operates at a low level to mimic actual hardware input rather than simple software-based clicks.
-The UI: PyQt5
-The interface is fully threaded. The clicking logic runs independently of the GUI, ensuring the app never freezes or lags during high-speed clicking.
-🧠 Smart Mode (Hold-to-Click Logic)
-Smart Mode uses Event Math to stay hidden:
-Tracking: It tracks the ratio of Physical vs. Virtual click events.
-Logic: It monitors the state using the formula: Check = TotalEvents - (VirtualClicks * 2).
-Human Reaction: This math allows the app to stop the instant you release the physical button, perfectly mimicking human reaction speed.
-✨ Customizable Features
-Algorithms: Choose between Uniform, Gaussian (Bell Curve), or Humanized Burst patterns.
-Micro-Movements: Adjust Shake X/Y and Sensitivity to simulate natural hand tremors.
-Precision Timing: Set Min/Max CPS and randomize Click Duration (Mean/StdDev).
-Profiles: Save and Load your custom settings via JSON configuration files.
-🛡️ Anti-Cheat Safety
-By utilizing Gaussian Jitter, Micro-Shakes, and Smart Event Math, the clicker avoids "Perfect Timing" and "Static Cursor" red flags that modern anti-cheats look for.
-Disclaimer: Use responsibly. This tool is designed for stealth, but use in online environments is at your own risk.
+$$Check = TotalEvents - (VirtualClicks \times 2)$$
+
+This ensures the application stops the instant physical input is released, perfectly replicating human reaction latency.
+
+---
+
+## 🚀 Installation & Setup
+
+It is highly recommended to run this in a **Python Virtual Environment (venv)** to maintain a clean workspace.
+
+### 1. Clone & Enter Directory
+```bash
+git clone [https://github.com/YourUsername/PythonAutoclicker.git](https://github.com/YourUsername/PythonAutoclicker.git)
+cd PythonAutoclicker
