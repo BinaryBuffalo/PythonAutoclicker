@@ -5,14 +5,15 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Anti-Cheat](https://img.shields.io/badge/Anti--Cheat-Bypass_Optimized-success)
 
-`PythonAutoclicker` is an advanced input simulation tool designed to mimic human behavior. By combining **Gaussian distribution timing**, **micro-movement jitter**, and **Smart Event Math**, it provides a high level of stealth for titles like *R6*, *Arc Raiders*, and *Call of Duty*.
+`PythonAutoclicker` is an advanced input simulation tool designed to mimic human behavior. By combining **Gaussian distribution timing**, **micro-movement jitter**, and **Smart Event Math**, it provides a high level of stealth for competitive titles.
 
 ---
 
 ## 🌟 Key Features
 
-* **Dual-Logic Modes:** * **Standard Mode:** Classic toggle (On/Off).
-    * **Smart Mode:** Context-aware Hold-to-Click.
+* **Dual-Logic Modes:**
+    * **Standard Mode:** Classic toggle (On/Off).
+    * **Smart Mode:** Context-aware Hold-to-Click functionality.
 * **Inventory Safety:** Keep the script "Armed" while disabling clicking in menus for seamless inventory management.
 * **Humanized Algorithms:** Choose between **Uniform**, **Gaussian (Bell Curve)**, or **Humanized Burst** patterns.
 * **Micro-Movements:** Simulates natural hand tremors with adjustable `Shake X/Y` and sensitivity.
@@ -35,5 +36,12 @@ It is highly recommended to run this in a **Python Virtual Environment (venv)** 
 
 ### 1. Clone & Enter Directory
 ```bash
-git clone [https://github.com/YourUsername/PythonAutoclicker.git](https://github.com/YourUsername/PythonAutoclicker.git)
+git clone https://github.com/BinaryBuffalo/PythonAutoclicker.git
 cd PythonAutoclicker
+python -m venv VM1
+source venv/bin/activate
+pip install PyQt5 pynput
+python aclick3.py
+```
+
+
